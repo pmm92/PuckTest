@@ -1,5 +1,10 @@
 <html>
  <head>
+    <script>
+     setWatch(function() {
+        console.log("Pressed");
+      }, BTN, {edge:"rising", debounce:50, repeat:true});
+  </script>
  </head>
  <body>
   <script src="https://www.puck-js.com/puck.js"></script>
