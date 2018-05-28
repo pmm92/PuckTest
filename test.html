@@ -22,9 +22,8 @@
       elements.bat.setValue(d.bat);
       // now get the history - these could take a while
       // so we do it separately.
-      Puck.eval("{bat:E.getTemperature()}", function(d) {
-        elements.temp.setData(d);
-      });
+     elements.temp.setData(E.getTemperature());
+     
     });
   }
   // Set up the controls we see on the screen    
