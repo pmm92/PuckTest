@@ -9,8 +9,11 @@
   if (annyang) {
     // Definimos nuestro primer comando. Primero escribimos el comando y posteriormente la función a ejecutar.
     var commandos = {
-      'hola': function() {
-        alert("¡Hola!");
+      'enciende': function() {
+        Puck.write('LED1.reset();\n');
+      },
+     'apaga': function() {
+        Puck.write('LED1.set();\n');
       }
     };
 
@@ -24,7 +27,7 @@
     annyang.start();
  }
  </script>
-  <button onclick="Puck.write('LED1.set();\n');">ES!</button>
+  <button onclick="Puck.write('LED1.set();\n');">SP!</button>
   <button onclick="Puck.write('LED1.reset();\n');">Off!</button>
  </body>
 </html>
