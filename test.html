@@ -9,11 +9,29 @@
   if (annyang) {
     // Definimos nuestro primer comando. Primero escribimos el comando y posteriormente la función a ejecutar.
     var commandos = {
-      'enciende': function() {
+      'enciende led 1': function() {
         Puck.write('LED1.reset();\n');
       },
-     'apaga': function() {
+     'apaga led 1': function() {
         Puck.write('LED1.set();\n');
+      },
+     'enciende led 2': function() {
+        Puck.write('LED2.reset();\n');
+      },
+     'apaga led 2': function() {
+        Puck.write('LED2.set();\n');
+      },
+     'enciende led 3': function() {
+        Puck.write('LED3.reset();\n');
+      },
+     'apaga led 3': function() {
+        Puck.write('LED3.set();\n');
+      },
+     'enciende led 4': function() {
+        Puck.write('LED4.reset();\n');
+      },
+     'apaga led 4': function() {
+        Puck.write('LED4.set();\n');
       }
     };
 
@@ -27,7 +45,6 @@
     annyang.start();
  }
  </script>
-  <button onclick="Puck.write('LED1.set();\n');">SP!</button>
-  <button onclick="Puck.write('LED1.reset();\n');">Off!</button>
+  <button onclick="Puck.write('LED1.set();\n');">CONECTAR!</button>
  </body>
 </html>
