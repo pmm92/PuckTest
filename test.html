@@ -7,20 +7,24 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
   <script>
   if (annyang) {
-    // Let's define our first command. First the text we expect, and then the function it should call
-    var commands = {
-      "on":   function() { Puck.write('LED1.reset();\n'); },
-      "off": function() { Puck.write('LED1.set();\n'); }
+    // Definimos nuestro primer comando. Primero escribimos el comando y posteriormente la función a ejecutar.
+    var commandos = {
+      'hola': function() {
+        alert("¡Hola!");
+      }
     };
 
-    // Add our commands to annyang
-    annyang.addCommands(commands);
+    // Agregamos nuestros comandos a annyang.
+    annyang.addCommands(commandos);
 
-    // Start listening. You can call this here, or attach this call to an event, button, etc.
-    annyang.start({ continuous: true });
-  }
-  </script>
-  <button onclick="Puck.write('LED1.set();\n');">On!</button>
+    //Establecemos el lenguaje, en mi caso es español de México (puedes ver la lista completa de lenguajes soportados aquí).
+    annyang.setLanguage("es-ES");
+
+    // Empezmaos a escuchar.
+    annyang.start();
+ }
+ </script>
+  <button onclick="Puck.write('LED1.set();\n');">ES!</button>
   <button onclick="Puck.write('LED1.reset();\n');">Off!</button>
  </body>
 </html>
